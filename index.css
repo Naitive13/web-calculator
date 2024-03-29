@@ -13,6 +13,7 @@
 
 :root {
   --body-color: #b4ffe6;
+  --secondary-color:#fff;
 }
 
 body {
@@ -24,9 +25,9 @@ body {
 }
 
 main {
-  background: #fff;
+  background: var(--secondary-color);
   margin: 0;
-  border: solid 2.5px #000;
+  border: solid 3px #000;
   border-radius: 10px;
   height: 80%;
   width: 25%;
@@ -34,7 +35,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  filter: drop-shadow(5px 5px);
+  filter: drop-shadow(7px 7px);
 }
 
 section {
@@ -44,7 +45,7 @@ section {
 
 .screen {
     /* border: solid 3px #552fd9; */
-  background: #fff;
+  background: var(--secondary-color);
   width: 100%;
   height: 25%;
   border-radius: 8px 8px 0 0;
