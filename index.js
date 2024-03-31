@@ -3,7 +3,7 @@ const main_text = document.querySelector('#main_text')
 const sub_text = document.querySelector('#sub_text')
 const numbers = '0123456789'.split('')
 const operator = '+-/'.split('')
-let result
+const parenthesis = '()'.split('')
 
 String.prototype.del = function (){
     let new_str = this.split('')
@@ -33,14 +33,27 @@ for (const element of button){
         })
     }
 
+    else if (parenthesis.includes(element.innerText)){
+        element.addEventListener('click', ()=>{
+            if (main_text.innerText != '0'){
+                main_text.innerText += element.innerText
+            }
+        })
+    }
+
     else if (element.innerText == 'RESULT'){
         element.addEventListener('click', ()=>{
-            if (eval(main_text.innerText) == main_text.innerText){
-                alert ('Invalid expression')
-            }
+        try {
+            let result = eval(main_text.innerText) 
+            sub_text.innerText = main_text.innerText
+            if (result.toString().indexOf('.') == -1 ){
+                main_text.innerText = result
+            } 
             else{
-                sub_text.innerText = main_text.innerText
-                main_text.innerText = eval(main_text.innerText)
+                main_text.innerText = parseFloat(result).toFixed(9)
+            }
+            } catch (error) {
+                alert('invalid expression')
             }
         })
     }
