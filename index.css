@@ -68,12 +68,28 @@ section {
     display: flex;
     justify-content: space-evenly;
   }
-  button {
-    height: 80%;
-    width: 20%;
-  }
+}
+
+button {
+  height: 80%;
+  width: 20%;
+  background: var(--secondary-color);
+  border: solid 2px;
+  border-radius: 10px;
+  filter: drop-shadow(2px 2px);
+  transition: 250ms;
 }
 
 #result {
   width: 44%;
+}
+
+button:hover{
+  background: #eee;
+  cursor: pointer;
+}
+
+button:active{
+  transform: scale(.8);
+  background: #c5c5c5;
 }
