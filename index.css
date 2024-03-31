@@ -49,9 +49,10 @@ section {
   width: 100%;
   height: 25%;
   border-radius: 8px 8px 0 0;
-  justify-content: center;
+  justify-content: space-around;
   align-items: end;
-  padding-inline: 2%;
+  padding-inline: 4%;
+  padding-block: 7%;
 }
 
 .buttons {
@@ -84,6 +85,15 @@ button {
   width: 44%;
 }
 
+h1{
+  font-size: 2.5rem;
+}
+
+p{
+  font-size: .8rem;
+}
+
+/*animation zone*/
 button:hover{
   background: #eee;
   cursor: pointer;
