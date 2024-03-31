@@ -77,4 +77,12 @@ for (const element of button){
         })
     }
 
+    else if (element.innerText == '.'){
+        element.addEventListener('click', ()=>{
+            if (main_text.innerText.toString().includes('.') == false){
+                main_text.innerText += '.'
+            }
+        })
+    }
+
 }
