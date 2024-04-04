@@ -103,3 +103,25 @@ button:active{
   transform: scale(.8);
   background: #c5c5c5;
 }
+
+
+/* Responsive zone */
+@media  (max-width:675px) {
+  main {
+    height: 75%;
+    width: 90%;
+  }
+}
+@media  (min-width:675px ) and (max-width:1175px) {
+  main {
+    height: 75%;
+    width: 50%;
+  }
+}
+@media  (min-width:1175px ) and (max-width:1300px) {
+  main {
+    height: 75%;
+    width: 30%;
+  }
+}
+
